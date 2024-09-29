@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+  .section{
+    height: 55%;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow-x: auto;
+    position: relative;
+    scroll-behavior:smooth;
+    scrollbar-width: 0;
+    
+  }
+  .btn-left{
+    position: fixed;
+    top: 140px;
+    left: 10px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1;
+
+
+
+  }
+  .btn-right{
+    position: fixed;
+    left: 1230px;
+    top: 140px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+
+  }
+  .s1 img{
+    margin-left: 10px;
+    border-radius: 10px;
+    /* filter: grayscale(100%); */
+    /* transition:transform 0.5s; */
+
+  }
+  .s1 img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .section::-webkit-scrollbar{
+    display: none;
+  }
+    </style>
+  
+</head>
+<body>
+    <div class="section">
+            <i class="fa-solid fa-angles-left btn-left"></i>
+            <!-- <button class="btn-left">b</button> -->
+            <div class="s1">
+                <img height="280px" width="180px" src="./s1.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                <img height="280px" width="180px" src="./s2.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                <img height="280px" width="180px" src="./s3.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                <img height="280px" width="180px" src="./s4.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                <img height="280px" width="180px" src="./s5.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                <img height="280px" width="180px" src="./s6.jpg" alt="">
+                <p>Keeda Cola</p>
+              </div>
+              <div class="s1">
+                  <img height="280px" width="180px" src="./s6.jpg" alt="">
+                  <p>Keeda Cola</p>
+                </div>
+                <div class="s1">
+                  <img height="280px" width="180px" src="./s6.jpg" alt="">
+                  <p>Keeda Cola</p>
+                </div>
+                <div class="s1">
+                  <img height="280px" width="180px" src="./s6.jpg" alt="">
+                  <p>Keeda Cola</p>
+                </div>
+                <i class="fa-solid fa-angles-right btn-right"></i>
+                 <!-- <button class="btn-right">b</button> -->
+        
+            </div>
+       
+</body>
+
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", 
+  function Aha() {
+  let scrollContainer = document.querySelector(".section1");
+  let backBtn = document.querySelector(".btn-back");
+  let nextBtn = document.querySelector(".btn-next");
+
+ 
+
+  nextBtn.addEventListener("click", ()=>{
+      scrollContainer.scrollLeft += 300;
+  });
+  backBtn.addEventListener("click", ()=>{
+      scrollContainer.scrollLeft -= 300;
+  });
+})
+</script>
